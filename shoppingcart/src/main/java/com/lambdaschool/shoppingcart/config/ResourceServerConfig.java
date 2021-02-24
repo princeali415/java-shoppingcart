@@ -39,7 +39,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter      /
             .antMatchers("/products/**").hasAnyRole("ADMIN")
             .antMatchers("/users/**").hasAnyRole("ADMIN")
             .antMatchers("/carts/**").hasAnyRole("ADMIN", "USER")
-            .antMatchers("/logout/**")
+            .antMatchers("/logout")
             .authenticated()
             .anyRequest().denyAll()
             .and()
