@@ -20,7 +20,7 @@ public class CartController
     @Autowired
     private UserService userService;
 
-    @PreAuthorize(value = "hasAnyRole('ADMIN', 'USER')")        // restrict access to this route for these roles
+
     @GetMapping(value = "/user/{userid}",
         produces = {"application/json"})
     public ResponseEntity<?> listCartItemsByUserId(
